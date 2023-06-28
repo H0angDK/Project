@@ -22,6 +22,33 @@ int* readArray(string path,int &size) {
 		return arr;
 	}
 	else {
-		return 0;
+		cout << "file not open\n";
+		return NULL;
+	}
+}
+
+string readText(string path) {
+	ifstream fin(path);
+	string line, text;
+	if (fin.is_open())
+	{
+		while (getline(fin, line)) {
+			text += line + "\n";
+		}
+	}else{
+		cout << "file is noy open\n";
+	}
+	fin.close();
+	return text;
+}
+void writeText(string path, string text) {
+	ofstream fout(path);
+	if (fout.is_open()) {
+		fout << text;
+		string a = readText(path);
+		cout <<"text is write successful\n";
+	}
+	else {
+		cout << "file not open\n";
 	}
 }

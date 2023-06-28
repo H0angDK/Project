@@ -21,9 +21,9 @@ void task0401() {
 	}
 }
 
-double partSin2(double x, double eps) {
-	double sum = x;
-	double term = x;
+long double partSin2(double x, double eps) {
+	long double sum = x;
+	long double term = x;
 	int n = 1;
 	while (abs(term) > eps) {
 		term *= -x * x / ((2 * n + 1) * (2 * n));
