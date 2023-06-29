@@ -26,6 +26,28 @@ int* readArray(string path,int &size) {
 		return NULL;
 	}
 }
+void write2DArr(int** arr, int n, string path) {
+	ofstream fout(path);
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			fout << arr[i][j] << " ";
+		}
+		fout << endl;
+	}
+	fout.close();
+}
+int** read2DArr(int n, string path) {
+	int** arr = new int* [n];
+	for (int i = 0; i < n; ++i) arr[i] = new int[n];
+	ifstream fin(path);
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			fin >> arr[i][j];
+		}
+	}
+	fin.close();
+	return arr;
+}
 
 string readText(string path) {
 	ifstream fin(path);
