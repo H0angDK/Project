@@ -41,6 +41,16 @@ double** convect(int** arr, int n, int m) {
     }
     return a;
 }
+void printSys(double**arr,int n) {
+    for (int i = 0; i < n; ++i) {
+        cout << "| ";
+        for (int j = 0; j < n; ++j) {
+            cout << arr[i][j] << "*X" << j;
+            if (j < n - 1) cout << " + ";
+        }
+        cout << " = " << arr[i][n] << endl;
+    }
+}
 
 void task08(string path) {
     int n;
@@ -64,6 +74,7 @@ void task08(string path) {
     deleteArray(tmp, n);
     deleteArray(arr, n);
     double** a = convect(read2DArr(n, n + 1, path), n, n + 1);
+    printSys(a, n);
     for (int i = 0; i < n; i++) {
         delete[] a[i];
     }
