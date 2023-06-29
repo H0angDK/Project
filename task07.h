@@ -5,27 +5,6 @@
 #include <cmath>
 #include "utils.h"
 using namespace std;
-int fillArr() {
-	return rand() % 1000000 + 1;
-}
-int** gen2Darr(int n) {
-	int** arr = new int* [n];
-	for (int i = 0; i < n; ++i) {
-		arr[i] = new int[n];
-	}
-	for (int i = 0; i < n; ++i) {
-		for (int j = 0; j < n; ++j) {
-			arr[i][j] = fillArr();
-		}
-	}
-	return arr;
-}
-void deleteArray(int** arr, int n) {
-	for (int i = 0; i < n; i++) {
-		delete[] arr[i];
-	}
-	delete[] arr; 
-}
 void print(int** arr, int n) {
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < n; ++j) {
@@ -56,9 +35,9 @@ void task07(string path) {
 	cout << "enter length\n";
 	cin >> n;
 	cout << n;
-	int** arr = gen2Darr(n);
-	write2DArr(arr, n, path);
+	int** arr = gen2Darr(n, 1000000, 1);
+	write2DArr(arr, n, n, path);
 	deleteArray(arr, n);
-	int** fileArr = read2DArr(n, path);
+	int** fileArr = read2DArr(n, n, path);
 	print(fileArr, n);
 }

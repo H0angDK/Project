@@ -7,6 +7,7 @@
 #include "task05.h"
 #include "task06.h"
 #include "task07.h"
+#include "task08.h"
 #include "task09.h"
 #include "utils.h"
 using namespace std;
@@ -21,6 +22,7 @@ int main()
     //task06(path2,path3);
     //cout<<readText(path3);
     //task07(path4);
+    task08(path4);
     //task09(path2);
     return 0;
 }
