@@ -134,6 +134,7 @@
     <ClInclude Include="task05.h" />
     <ClInclude Include="task06.h" />
     <ClInclude Include="task07.h" />
+    <ClInclude Include="task09.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>

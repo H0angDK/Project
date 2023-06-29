@@ -74,3 +74,34 @@ void writeText(string path, string text) {
 		cout << "file not open\n";
 	}
 }
+struct FootballPlayer{
+	string name;
+	string position;
+	int age;
+	int games;
+	int goals;
+};
+void writeBin(string path, FootballPlayer club[],int n) {
+	ofstream fout(path, ios::binary);
+	if (fout.is_open()) {
+		fout.write(reinterpret_cast<const char*>(club), sizeof(FootballPlayer) * n);
+		cout << "text is write successful\n";
+		fout.close();
+	}
+	else
+	{
+		cout << "Error opening file" << endl;
+		return;
+	}
+}
+void readBin(string path,FootballPlayer club[],int n) {
+	ifstream fin(path,ios::binary);
+	if (fin.is_open()) {
+		fin.read(reinterpret_cast<char*>(club), sizeof(FootballPlayer) * n);
+		fin.close();
+	}
+	else {
+		cout << "Error opening file" << endl;
+		return;
+	}
+}

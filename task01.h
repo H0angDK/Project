@@ -11,7 +11,6 @@ void task01(string path) {
     while (true) {
         cout << num << endl;
         getline(cin, command);
-        //cout<<command<<endl;
         if (command != ":2" && command != "-1") {
             cout << "invalid command\n";
             continue;
