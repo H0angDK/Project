@@ -6,7 +6,7 @@
 #include <conio.h>
 #include "utils.h"
 using namespace std;
-const int N = 10;
+const int N = 50;
 const char* names[] = {
 	"Messi", "Ronaldo", "Dzyuba", "Kante", "Lukaku",
 	"Neymar", "Mbappe", "Lewandowski", "Kane", "Salah",
@@ -50,5 +50,5 @@ void task09(string path) {
 	showPlayers(clubNew, N);
 	sort(clubNew, clubNew + N, compareLasts);
 	cout << "the best striker at 5 last games is\nname:\t" << clubNew[N-1].name << "\nposition:\t" << clubNew[N-1].position << "\nage:\t" << clubNew[N-1].age << "\ngames is played:\t" << clubNew[N-1].games << "\ngoals is scored:\t" << clubNew[N-1].goals << "\ngoals at last 5 game:\t" << clubNew[N-1].lasts.goal << endl << endl;
-	_getch();
+	cin.get(); cin.get();
 }
