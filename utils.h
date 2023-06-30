@@ -82,18 +82,22 @@ void writeText(string path, string text) {
 	if (fout.is_open()) {
 		fout << text;
 		string a = readText(path);
-		cout <<"text is write successful\n";
 	}
 	else {
 		cout << "file not open\n";
 	}
 }
+struct Last5Games
+{
+	int goal;
+};
 struct FootballPlayer{
 	string name;
 	string position;
 	int age;
 	int games;
 	int goals;
+	Last5Games lasts;
 };
 void writeBin(string path, FootballPlayer club[],int n) {
 	ofstream fout(path, ios::binary);

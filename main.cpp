@@ -24,8 +24,8 @@ int main()
     //task06(path2,path3);
     //cout<<readText(path3);
     //task07(path4);
-    task08(path4, path5);
-    cout << readText(path5);
-    //task09(path6);
+    //task08(path4, path5);
+    //cout << readText(path5);
+    task09(path6);
     return 0;
 }
