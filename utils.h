@@ -22,9 +22,20 @@ int* readArray(string path,int &size) {
 		return arr;
 	}
 	else {
-		cout << "file not open\n";
+		cout << "file is not open\n";
 		return NULL;
 	}
+}
+void writeSolution(string path, int n, double* x) {
+	ofstream fout(path);
+	if (!fout.is_open()) {
+		cout << "file is not open\n";
+		return;
+	}
+	for (int i = 0; i < n; i++) {
+		fout << "x[" << i << "]=" << x[i] << endl;
+	}
+	fout.close();
 }
 void write2DArr(int** arr, int n, int m, string path) {
 	ofstream fout(path);
@@ -61,7 +72,7 @@ string readText(string path) {
 			text += line + "\n";
 		}
 	}else{
-		cout << "file is noy open\n";
+		cout << "file is not open\n";
 	}
 	fin.close();
 	return text;

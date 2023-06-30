@@ -13,16 +13,19 @@
 using namespace std;
 int main()
 {
-    const string path1 = "result.txt";
-    const string path2 = "text.txt";
-    const string path3 = "output.txt";
-    const string path4 = "array.txt";
+    const string path1 = "./files/result.txt";
+    const string path2 = "./files/text.txt";
+    const string path3 = "./files/output.txt";
+    const string path4 = "./files/array.txt";
+    const string path5 = "./files/answer.txt";
+    const string path6 = "./files/foot.bin";
     //task01(path1);
     //task05(path1);
     //task06(path2,path3);
     //cout<<readText(path3);
     //task07(path4);
-    task08(path4);
-    //task09(path2);
+    task08(path4, path5);
+    cout << readText(path5);
+    //task09(path6);
     return 0;
 }
