@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+//#include <conio.h>
 #include "task01.h"
 #include "task02.h"
 #include "task03.h"
@@ -26,6 +27,7 @@ int main()
     //task07(path4);
     //task08(path4, path5);
     //cout << readText(path5);
-    task09(path6);
+    //task09(path6);
+    //_getch();
     return 0;
 }
