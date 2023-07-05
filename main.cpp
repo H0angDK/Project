@@ -21,7 +21,8 @@ int main()
     const string path5 = "./files/answer.txt";
     const string path6 = "./files/foot.bin";
     //task01(path1);
-    //task02();
+  //task02();
+    //task03();
     //task05(path1);
     //task06(path2,path3);
     //cout<<readText(path3);
